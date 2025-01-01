@@ -14,7 +14,6 @@ public class CartServiceImpl {
 
     private final DiscoveryClient discoveryClient;
 
-
     public CartServiceImpl(DiscoveryClient discoveryClient) {
         this.discoveryClient = discoveryClient;
     }
@@ -22,7 +21,6 @@ public class CartServiceImpl {
     public void test() {
         List<ServiceInstance> instances = discoveryClient.getInstances("pay-service");
         if (!CollectionUtils.isEmpty(instances)) {
-//            ServiceInstance instance = instances.get(new Random().nextInt(instances.size()));
             for (ServiceInstance instance : instances) {
                 System.out.println(instance.getHost() + ":" + instance.getPort());
             }
