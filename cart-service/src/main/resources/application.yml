@@ -1,0 +1,15 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: cart-service
+
+  datasource:
+    url: jdbc://mysql://${db.host}:3306/cart
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${db.user}
+    password: ${db.password}
+  cloud:
+    # 服务注册
+    nacos:
+      server-addr: localhost:8848
