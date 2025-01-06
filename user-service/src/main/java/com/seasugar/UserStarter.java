@@ -2,12 +2,10 @@ package com.seasugar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients
-public class CartStarter {
+public class UserStarter {
     public static void main(String[] args) {
-        SpringApplication.run(CartStarter.class, args);
+        SpringApplication.run(UserStarter.class, args);
     }
 }

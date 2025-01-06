@@ -1,0 +1,11 @@
+server:
+  port: 9988
+
+spring:
+  cloud:
+    # 服务注册
+    nacos:
+      server-addr: localhost:8848
+
+  application:
+    name: common-service

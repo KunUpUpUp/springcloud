@@ -6,8 +6,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
-public class CartStarter {
+public class CommonStarter {
     public static void main(String[] args) {
-        SpringApplication.run(CartStarter.class, args);
+        SpringApplication.run(CommonStarter.class, args);
     }
 }

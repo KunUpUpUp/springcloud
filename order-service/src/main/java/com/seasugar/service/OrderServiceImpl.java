@@ -13,11 +13,7 @@ public class OrderServiceImpl {
     @Autowired
     private OrderMapper orderMapper;
 
-    @Value("${name}")
-    private String url;
-
     public Order getOrderById(Long id) {
-        System.out.println(url);
         return orderMapper.getOrder(id);
     }
 }

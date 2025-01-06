@@ -1,10 +1,9 @@
 package com.seasugar.controller;
 
+import com.seasugar.domain.Cart;
 import com.seasugar.service.CartServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("cart")
@@ -15,5 +14,10 @@ public class CartController {
     @GetMapping("test")
     public void test() {
         cartService.test();
+    }
+
+    @PostMapping("insert")
+    public void insertCart(@RequestBody Cart cart) {
+        cartService.insertCart(cart);
     }
 }

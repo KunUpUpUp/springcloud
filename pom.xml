@@ -12,6 +12,9 @@
         <module>pay-service</module>
         <module>cart-service</module>
         <module>order-service</module>
+        <module>user-service</module>
+        <module>common-service</module>
+        <module>gateway-service</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

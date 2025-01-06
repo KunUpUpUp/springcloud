@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function fun() {
+        fetch('http://localhost:10086/user/getUser/5', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    }
+</script>
+<body>
+<button onclick="fun()">跨域问题</button>
+</body>
+</html>

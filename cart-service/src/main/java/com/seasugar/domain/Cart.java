@@ -5,10 +5,10 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
-public class Order {
+public class Cart {
     private Long id;
     private Long itemId;
+    private int itemNum;
     private String itemName;
-    private Integer itemNum;
     private BigDecimal itemPrice;
 }
