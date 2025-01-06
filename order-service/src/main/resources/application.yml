@@ -1,0 +1,16 @@
+server:
+  port: 8084
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${db.host}:${db.port}/sgmall?characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    username: ${db.username}
+    password: ${db.password}
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
