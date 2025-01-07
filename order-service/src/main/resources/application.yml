@@ -16,3 +16,16 @@ mybatis:
     map-underscore-to-camel-case: true
 
 seata:
+  registry:
+    type: nacos
+    nacos:
+      server-addr: localhost:8848
+      namespace: ""
+      group: DEFAULT_GROUP
+      application: seata-server
+      username: nacos
+      password: nacos
+  tx-service-group: seata-demo
+  service:
+    vgroup-mapping:
+      seata-demo: HZ
