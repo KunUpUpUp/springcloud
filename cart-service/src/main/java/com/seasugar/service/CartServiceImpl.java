@@ -24,10 +24,9 @@ public class CartServiceImpl {
         this.discoveryClient = discoveryClient;
     }
 
-    @Transactional
     public void insertCart(Cart cart) {
-        cartMapper.insert(cart);
         int a = 1 / 0;
+        cartMapper.insert(cart);
     }
 
 

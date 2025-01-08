@@ -29,3 +29,4 @@ seata:
   service:
     vgroup-mapping:
       seata-demo: HZ
+  data-source-proxy-mode: XA

@@ -9,3 +9,23 @@ spring:
     url: jdbc:mysql://localhost:3306/sgmall?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&&allowPublicKeyRetrieval=true
     username: root
     password: 123456
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+seata:
+  registry:
+    type: nacos
+    nacos:
+      server-addr: localhost:8848
+      namespace: ""
+      group: DEFAULT_GROUP
+      application: seata-server
+      username: nacos
+      password: nacos
+  tx-service-group: seata-demo
+  service:
+    vgroup-mapping:
+      seata-demo: HZ
+  data-source-proxy-mode: XA

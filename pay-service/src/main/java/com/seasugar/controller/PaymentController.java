@@ -1,16 +1,26 @@
 package com.seasugar.controller;
 
+import com.seasugar.domain.request.PayRequest;
+import com.seasugar.service.PaymentServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("pay")
 @RestController
 @RefreshScope
 public class PaymentController {
 
-    @GetMapping
-    public void payByWeixin() {
+    @Autowired
+    private PaymentServiceImpl paymentService;
+
+    @PostMapping("wx")
+    public void payByWeixin(@RequestBody PayRequest payRequest) {
+        paymentService.pay(payRequest);
+    }
+
+    @PostMapping
+    public void insertUser() {
+//        paymentService.insert(order);
     }
 }
