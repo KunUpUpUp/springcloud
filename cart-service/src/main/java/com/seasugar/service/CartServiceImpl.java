@@ -25,7 +25,7 @@ public class CartServiceImpl {
     }
 
     public void insertCart(Cart cart) {
-        int a = 1 / 0;
+//        int a = 1 / 0;
         cartMapper.insert(cart);
     }
 

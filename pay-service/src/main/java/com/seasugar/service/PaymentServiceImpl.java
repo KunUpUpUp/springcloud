@@ -22,6 +22,9 @@ public class PaymentServiceImpl {
 
     @GlobalTransactional
     public void pay(PayRequest payRequest) {
+        // EDA 事件驱动架构
+        // 分布式事务只能管理同步的方法，对于异步的无法处理
+
         //        new Thread(() -> {
         Order order = new Order();
         BeanUtils.copyProperties(payRequest, order);
