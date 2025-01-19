@@ -1,0 +1,15 @@
+server:
+  port: 8080
+dubbo:
+  application:
+    name: controller-service
+  registry:
+    address: nacos://127.0.0.1:8848
+
+spring:
+  cloud:
+    # 服务注册
+    nacos:
+      server-addr: localhost:8848
+  application:
+    name: controller-service

@@ -1,14 +1,12 @@
 //package com.seasugar.controller;
 //
-//import com.seasugar.domain.Order;
-//import com.seasugar.service.OrderServiceImpl;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.web.bind.annotation.*;
 //
 //@RequestMapping("order")
 //@RestController
 //public class OrderController {
-//    @Autowired
+//    @DubboReference
 //    private OrderServiceImpl orderService;
 //
 //    @GetMapping("{id}")

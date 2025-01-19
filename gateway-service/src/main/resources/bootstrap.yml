@@ -1,0 +1,11 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: localhost:8848

@@ -1,10 +1,7 @@
 spring:
   application:
-    name: order-service
-#  profiles:
-#    active: dev
+    name: gateway-service
   cloud:
     nacos:
       config:
-        file-extension: yaml
         server-addr: localhost:8848

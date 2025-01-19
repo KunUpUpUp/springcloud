@@ -16,16 +16,17 @@ import reactor.core.publisher.Mono;
 public class MyFilter implements GlobalFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        ServerHttpRequest request = exchange.getRequest();
-        MultiValueMap<String, String> queryParams = request.getQueryParams();
-        String name = queryParams.getFirst("zkp");
-        if (name.equals("jxr")) {
-            // 放行
-            return chain.filter(exchange);
-        }
-        // 拦截
-        // 设置状态码
-        exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-        return exchange.getResponse().setComplete();
+        return chain.filter(exchange);
+//        ServerHttpRequest request = exchange.getRequest();
+//        MultiValueMap<String, String> queryParams = request.getQueryParams();
+//        String name = queryParams.getFirst("zkp");
+//        if (name.equals("jxr")) {
+//            // 放行
+//            return chain.filter(exchange);
+//        }
+//        // 拦截
+//        // 设置状态码
+//        exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
+//        return exchange.getResponse().setComplete();
     }
 }
